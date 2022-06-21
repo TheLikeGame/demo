@@ -3,7 +3,7 @@ apt install docker-ce -y
 systemctl start docker
 systemctl enable docker
 mkdir /mnt/app
-mount /dev/sr0(sr1)
+mount /dev/sr0 /mnt/app               //Если не находит файл "app.tar", то необходимо заменить "sr0" на "sr1"
 docker load < /mnt/app/app.tar
 docker images
 docker run --name app -p 8080:80 -d app
