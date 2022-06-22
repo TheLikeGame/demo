@@ -1,3 +1,5 @@
+//Если не прописать ip route 0.0.0.0 0.0.0.0 <ip address текущей машины (4.4.4.1 | 5.5.5.1)>
+
 int tunnel 1
 ip addr 172.16.1.1 255.255.255.0
 tunnel mode gre ip
