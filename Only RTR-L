@@ -1,0 +1,2 @@
+ip nat inside source static tcp 192.168.100.200 53 4.4.4.100 53
+ip nat inside source static udp 192.168.100.200 53 4.4.4.100 53
