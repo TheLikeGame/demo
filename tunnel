@@ -1,0 +1,23 @@
+int tunnel 1
+ip addr 172.16.1.1 255.255.255.0
+tunnel mode gre ip
+tunnel source 4.4.4.100
+tunnel destination 5.5.5.100
+exit
+router eigrp 6500
+network 172.16.1.0 0.0.0.255
+network 192.168.100.0 0.0.0.255
+exit
+sh ip ei ne
+
+int tunnel 1
+ip addr 172.16.1.2 255.255.255.0
+tunnel mode gre ip
+tunnel source 5.5.5.100
+tunnel destination 4.4.4.100
+exit
+router eigrp 6500
+network 172.16.1.0 0.0.0.255
+network 192.168.100.0 0.0.0.255
+exit
+sh ip ei ne
