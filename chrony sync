@@ -1,3 +1,14 @@
+---ISP---
 local startum 4
 allow 4.4.4.0/24
 allow 3.3.3.0/24
+
+---Windows (SRV & CLI)---
+
+gpedit
+admin temp > system > Windows time services > time providers
+4.4.4.1
+ntp
+
+services
+Windows Time [Restart]
