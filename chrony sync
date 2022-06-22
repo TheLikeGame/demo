@@ -1,0 +1,3 @@
+local startum 4
+allow 4.4.4.0/24
+allow 3.3.3.0/24
